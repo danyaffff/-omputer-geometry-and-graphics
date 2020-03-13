@@ -47,7 +47,7 @@ int main(int argc, char * argv[]) {
         
         image.setBrightness(atoi(argv[3]));
         image.setThickness(atoi(argv[4]));
-        image.setCoordinates(atoi(argv[5]), atoi(argv[6]), atoi(argv[7]), atof(argv[7]));
+        image.setCoordinates(atof(argv[5]), atof(argv[6]), atof(argv[7]), atof(argv[7]));
         
         if (argv[9] != NULL) {
             image.setGamma(atoi(argv[9]));
