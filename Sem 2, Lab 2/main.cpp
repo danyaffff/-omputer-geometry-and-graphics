@@ -46,11 +46,11 @@ int main(int argc, char * argv[]) {
         Image image(height, width, color);
         
         image.setBrightness(atoi(argv[3]));
-        image.setThickness(atoi(argv[4]));
+        image.setThickness(atof(argv[4]));
         image.setCoordinates(atof(argv[5]), atof(argv[6]), atof(argv[7]), atof(argv[7]));
         
         if (argv[9] != NULL) {
-            image.setGamma(atoi(argv[9]));
+            image.setGamma(atof(argv[9]));
         }
         
         image.input(fin);
