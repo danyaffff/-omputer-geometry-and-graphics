@@ -66,7 +66,7 @@ int Image::doGammaCorrection(int pixel) {
 }
 
 void Image::putPoint(double x, double y, int brightness) {
-    if ((int)y < 0 || (int)y >= 128) {
+    if ((int)y < 0 || (int)y >= height) {
         return;
     }
     if (x >= 0 && y >= 0 && x < width && y < height) {
