@@ -11,7 +11,7 @@ int main(int argc, char * argv[]) {
     ifstream fin;
     ofstream fout;
     fin.exceptions(ifstream::badbit | ifstream::failbit);
-    fout.exceptions(ofstream::badbit | ofstream:: failbit);
+    fout.exceptions(ofstream::badbit | ofstream::failbit);
     
     regex regular("[^\\.]+[^\\>]*\\.(pgm|ppm){1}$");
     cmatch checker1;
