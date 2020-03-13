@@ -15,7 +15,7 @@ Image::~Image() {
 }
 
 void Image::setBrightness(short int brightness) {
-    if (brightness < 0 || brightness > 255) {
+    if (brightness < 0 || brightness > color) {
         throw Exception("Задано неверное значение яркости!");
     } else {
         this->brightness = brightness;
