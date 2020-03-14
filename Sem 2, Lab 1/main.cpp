@@ -18,8 +18,6 @@ int main(int argc, char * argv[]) {
     int width;
     int color;
     
-    
-    
     try {
         if (argc < 4) {
             throw Exception("Введено недостаточно аргуменнтов!");
