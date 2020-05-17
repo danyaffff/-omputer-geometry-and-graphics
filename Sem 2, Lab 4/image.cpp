@@ -107,7 +107,7 @@ void Image::convertToRGB() {
                         image[i][j][0] = X * 255 + m;
                         image[i][j][1] = m;
                         image[i][j][2] = C * 255 + m;
-                    } else if (hue >= 300 && hue < 360) {
+                    } else if (hue >= 300 && hue <= 360) {
                         image[i][j][0] = C * 255.0 + m;
                         image[i][j][1] = m;
                         image[i][j][2] = X * 255 + m;
