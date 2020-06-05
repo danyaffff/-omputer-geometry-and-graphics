@@ -115,17 +115,18 @@ int main(int argc, char * argv[]) {
                 } else if (atoi(argv[i + 1]) == 3) {
                     inputCount = threeFiles;
                     
-                    inputFiles.push_back(argv[i + 2]);
-                    inputFiles.push_back(argv[i + 2]);
-                    inputFiles.push_back(argv[i + 2]);
+                    for (int j = 1; j <= 3; j++) {
+                        std::string inputFileName = argv[i + 2];
+                        inputFileName.insert(inputFileName.find("."), "_");
+                        inputFileName.insert(inputFileName.find("."), std::to_string(j));
+                        inputFiles.push_back(inputFileName);
+                    }
                     inputFiles.shrink_to_fit();
                     
                     inputFilesMetainformation.resize(3);
                 } else {
                     throw Exception("Введено неверное количество входных файлов!");
                 }
-                
-                inputFiles[0] = argv[i + 2];
                 
                 iflag = true;
                 continue;
@@ -173,14 +174,6 @@ int main(int argc, char * argv[]) {
             throw Exception("Введено неверное расширение выходного файла!");
         }
         
-        if (inputCount == threeFiles) {
-            inputFiles[0].insert(inputFiles[0].find("."), "_");
-            
-            for (int i = 2; i >= 0; i--) {
-                inputFiles[i] = inputFiles[0].insert(inputFiles[0].find("."), std::to_string(i + 1));
-            }
-        }
-        
         if (outputCount == threeFiles) {
             for (int i = 2; i >= 0; i--) {
                 outputFiles[i].insert(outputFiles[i].find("."), "_");
@@ -222,10 +215,6 @@ int main(int argc, char * argv[]) {
             
             if (checkMetainformation(inputFilesMetainformation, 2, inputCount)) {
                 throw Exception("Ошибка метаинформации третьего входящего файла!");
-            }
-            
-            if (checkCoincidence(inputFilesMetainformation, 3)) {
-                throw Exception("Метаинформация первого и третьего файлов не совпадает!");
             }
             
             image.input(fin);
