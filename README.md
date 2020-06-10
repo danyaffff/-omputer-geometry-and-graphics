@@ -10,4 +10,5 @@
 5. Not necessary;
 6. Not necessary;
 7. Not necessary;
+
 Tasks: [Google document](https://docs.google.com/document/d/1cL306pi86FKVai-RqRWP3itUr140pZ3rytfgfUx_Z24/edit);
