@@ -1,6 +1,5 @@
 # ITMO Computer Geometry and Graphics
-## Synopsis
-### Second semester 
+## Second semester 
 ###### Language: C++
 ###### Image: raw .ppm or raw .pgm
 
