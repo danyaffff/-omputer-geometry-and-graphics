@@ -11,4 +11,4 @@
 6. Not necessary;
 7. Not necessary;
 
-Tasks: [Google document](https://github.com/danyaffff/ITMO-Computer-geometry-and-graphics/tree/master/Tasks);
+[Tasks](https://github.com/danyaffff/ITMO-Computer-geometry-and-graphics/tree/master/Tasks);
